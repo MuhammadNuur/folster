@@ -3,9 +3,9 @@
 import streamlit as st
 from streamlit_folium import st_folium
 import time
-import folium_mod as folmap
+import modd.folium_mod as folmap
 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 def goes_wild():
     # # Sidebar
@@ -38,6 +38,7 @@ def goes_wild():
         container1 = st.container(border=True)
         with container1:
             st_data = st_folium(folmap.map, width=640)
+            st.write('ini adalah kolom 2')
 
     with col3 :
         container = st.container(border=True)

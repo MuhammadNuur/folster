@@ -82,7 +82,6 @@ for key in dict_list_trans:
 folium.LayerControl().add_to(map)
 map.add_child(folium.LatLngPopup())
 
-
 def main() -> None:
     map.show_in_browser()
 
