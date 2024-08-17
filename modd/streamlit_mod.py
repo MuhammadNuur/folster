@@ -5,7 +5,7 @@ from streamlit_folium import st_folium
 import time
 import modd.folium_mod as folmap
 
-# st.set_page_config(layout="wide")
+# Wide Layout dipanggil di halaman MAIN.py
 
 def goes_wild():
     # # Sidebar
@@ -28,21 +28,18 @@ def goes_wild():
 
     # st_data = st_folium(folmap.map, width=500)
 
-    col1, col2, col3 = st.columns([1,2,1])
+    col1, col2 = st.columns([1,4])
 
     with col1:
         st.markdown('# Selamat Datang di WebApp ini..')
         st.write('ini adalah kolom 1')
 
     with col2 :
-        container1 = st.container(border=True)
+        container1 = st.container(border=True, height=500)
         with container1:
-            st_data = st_folium(folmap.map, width=640)
+            # st_data = st_folium(folmap.map, width=720, height=300)
+            st_data = st_folium(folmap.map, use_container_width=True)
             st.write('ini adalah kolom 2')
-
-    with col3 :
-        container = st.container(border=True)
-        container.write("This is inside the container")
 
 
 def main() -> None:

@@ -9,7 +9,6 @@ import folium
 dftr_kolom = ("NAMA", "SISTEM", "TIPE", "TEGANGAN", "DAYA", "STATUS", "TAHUN", "KOTA",
               "KAPASITAS", "PROV", "Longitude", "Latitude")
 
-# data = pd.read_excel("docs/TestGI.xlsx",  index_col = None,  sheet_name='DataGardu')
 try :
     data = pd.read_excel("docs/TestGI.xlsx",  index_col = None,  sheet_name='DataGardu')
 except :
@@ -82,9 +81,10 @@ for key in dict_list_trans:
 folium.LayerControl().add_to(map)
 map.add_child(folium.LatLngPopup())
 
+
+
 def main() -> None:
     map.show_in_browser()
-
 
 if __name__ == "__main__":
     main()
