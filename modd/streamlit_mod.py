@@ -33,12 +33,13 @@ def goes_wild():
     with col1:
         st.markdown('# Selamat Datang di WebApp ini..')
         st.write('ini adalah kolom 1')
+        st.image("docs/inu.png")
 
     with col2 :
         container1 = st.container(border=True, height=500)
         with container1:
             # st_data = st_folium(folmap.map, width=720, height=300)
-            st_data = st_folium(folmap.map, use_container_width=True)
+            st_data = st_folium(folmap.map, height= 450, use_container_width=True)
             st.write('ini adalah kolom 2')
 
 
