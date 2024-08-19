@@ -1,13 +1,16 @@
 """ Main Streamlit Module """
 # import module
-import streamlit as st
-from streamlit_folium import st_folium
 import time
-import modd.folium_mod as folmap
+import streamlit as st
 
+from PIL import Image
+from streamlit_folium import st_folium
+
+import modd.folium_mod as folmap
 # Wide Layout dipanggil di halaman MAIN.py
 
 def goes_wild():
+    ''' Running Streamlit fuction '''
     # # Sidebar
     # with st.sidebar:
     #     st.sidebar.header("this is a sidebar")
@@ -20,30 +23,17 @@ def goes_wild():
     #     # st.write(f'isian input :{teks2}')
     #     st.divider()
 
-
     # Body
-    st.title("Hello GeeksForGeeks !!!")
-    st.header('ini adalah HEADER')
+    st.title("Monitoring Sistem MMU")
+    st.write('Dashboard ini menyajikan informasi terkini mengenai status kesehatan aset, ' +\
+             'pemeliharaan, dan kinerja sistem kelistrikan PLN UIW MMU')
 
-
-    # st_data = st_folium(folmap.map, width=500)
-
-    col1, col2 = st.columns([1,4])
-
-    with col1:
-        st.markdown('# Selamat Datang di WebApp ini..')
-        st.write('ini adalah kolom 1')
-        st.image("docs/inu.png")
-
-    with col2 :
-        container1 = st.container(border=True, height=500)
-        with container1:
-            # st_data = st_folium(folmap.map, width=720, height=300)
-            st_data = st_folium(folmap.map, height= 450, use_container_width=True)
-            st.write('ini adalah kolom 2')
-
+    box_map = st.container(border=True, height=500)
+    with box_map :
+        st_folium(folmap.map, height= 470, use_container_width=True)
 
 def main() -> None:
+    ''' Running Lokal di Modul ini '''
     goes_wild()
 
 

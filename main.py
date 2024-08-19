@@ -7,11 +7,12 @@ from PIL import Image
 import modd.folium_mod as folmap
 import modd.streamlit_mod as stmod
 
-
 img = Image.open('docs/inu.png')
-
 st.set_page_config(page_title="Simulasi Doang",
-                   page_icon=img,
-                   layout="wide",
-                   menu_items=None)
+        page_icon=img,
+        layout="wide",
+        menu_items=None)
+
+
+
 stmod.goes_wild()
