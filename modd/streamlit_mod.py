@@ -23,6 +23,13 @@ def goes_wild():
     #     # st.write(f'isian input :{teks2}')
     #     st.divider()
 
+    hide_menu_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            </style>
+            """
+    st.markdown(hide_menu_style, unsafe_allow_html=True)
+
     # Body
     st.title("Monitoring Sistem MMU")
     st.write('Dashboard ini menyajikan informasi terkini mengenai status kesehatan aset, ' +\
