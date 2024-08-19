@@ -78,10 +78,15 @@ for coordinates, row in zip(geo_df_list, geo_df.itertuples()):
 for key in dict_list_trans:
     folium.PolyLine(locations = dict_list_trans[key], tooltip=key, line_opacity = 0.5).add_to(ln_tms)
 
+folium.plugins.Fullscreen(
+    position="topright",
+    title="Expand me",
+    title_cancel="Exit me",
+    force_separate_button=True,
+).add_to(map)
+
 folium.LayerControl().add_to(map)
 map.add_child(folium.LatLngPopup())
-
-
 
 def main() -> None:
     map.show_in_browser()

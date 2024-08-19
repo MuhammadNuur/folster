@@ -40,6 +40,8 @@ def goes_wild():
     with box_map :
         st_folium(folmap.map, height= 470, use_container_width=True)
 
+
+
 def main() -> None:
     ''' Running Lokal di Modul ini '''
     goes_wild()
